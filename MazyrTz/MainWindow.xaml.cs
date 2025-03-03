@@ -24,5 +24,23 @@ namespace MazyrTz
         {
             InitializeComponent();
         }
+
+        private void NalogButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Переход на страницу "Налог"
+            MainFrame.Navigate(new Uri("ui/pages/NalogPage.xaml", UriKind.Relative));
+        }
+
+        private void GraphButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Переход на страницу "График"
+            MainFrame.Navigate(new Uri("ui/pages/GraphicPage.xaml", UriKind.Relative));
+        }
+
+        private void RawMaterialButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Переход на страницу "Сырьё"
+            MainFrame.Navigate(new Uri("ui/pages/BuildResPage.xaml", UriKind.Relative));
+        }
     }
 }

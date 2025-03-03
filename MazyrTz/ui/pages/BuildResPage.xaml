@@ -1,0 +1,22 @@
+﻿<Page x:Class="MazyrTz.ui.pages.BuildResPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:MazyrTz.ui.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Background="White"
+      Title="BuildResPage">
+
+    <Grid>
+        <Grid>
+            <Label Content="Тип материала" FontWeight="Bold" FontSize="32" HorizontalAlignment="Center" Margin="0,30,0,0" VerticalAlignment="Top"/>
+            <Button Content="Кирпич" Click="Brick_click" Width="140" Height="40" HorizontalAlignment="Left" Margin="88,215,0,0" VerticalAlignment="Top"/>
+            <Button Content="Бетон" Width="140" Height="40" HorizontalAlignment="Left" Margin="280,215,0,0" VerticalAlignment="Top"/>
+            <Button Content="Арматура" Width="140" Height="40" HorizontalAlignment="Left" Margin="458,215,0,0" VerticalAlignment="Top"/>
+
+        </Grid>
+    </Grid>
+</Page>

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MazyrTz"
         mc:Ignorable="d"
       
-        Title="Главное окно" Height="450" Width="800">
+        Title="Главное окно" Height="550" Width="850">
     <Grid>
         <!-- Определение колонок -->
         <Grid.ColumnDefinitions>
@@ -17,14 +17,14 @@
         </Grid.ColumnDefinitions>
 
         <!-- Боковое меню -->
-        <StackPanel Grid.Column="0" Background="LightGray">
-            <Button Content="Налог" Margin="10" Click="NavigateToPage1" />
-            <Button Content="График" Margin="10" Click="NavigateToPage2" />
-            <Button Content="Сырьё" Margin="10" Click="NavigateToPage3" />
+        <StackPanel Grid.Column="0" Background="#FF673AB7">
+            <Button Content="Налог" Margin="10" Click="NalogButton_Click"/>
+            <Button Content="График" Margin="10"  Click="GraphButton_Click"/>
+            <Button Content="Сырьё" Margin="10" Click="RawMaterialButton_Click"/>
         </StackPanel>
 
         <!-- Основное содержимое -->
-        <Frame x:Name="MainFrame" Grid.Column="1" NavigationUIVisibility="Hidden" />
+        <Frame x:Name="MainFrame" Grid.Column="1" NavigationUIVisibility="Hidden" Source="ui/pages/NalogPage.xaml"/>
     </Grid>
     
 </Window>

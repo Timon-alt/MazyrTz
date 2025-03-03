@@ -1,0 +1,55 @@
+﻿<Page x:Class="MazyrTz.ui.pages.BrickPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:MazyrTz.ui.pages"
+      mc:Ignorable="d"
+      Background="White"
+      d:DesignHeight="500" d:DesignWidth="700"
+      Title="BrickPage">
+
+    <Grid>
+        <Grid>
+            <Label 
+                Content="Кирпич" FontWeight="Bold" FontSize="32" HorizontalAlignment="Center" Margin="0,21,0,0" VerticalAlignment="Top"/>
+            <TextBox
+                x:Name="Length_brick"
+                HorizontalAlignment="Left" 
+                Width="250"
+                TextWrapping="Wrap" Text=""
+                materialDesign:HintAssist.Hint="Длина(м)"
+                VerticalAlignment="Top" 
+                Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="24,88,0,0"/>
+            <TextBox
+                x:Name="Width_brick"
+                HorizontalAlignment="Left" 
+                Width="250"
+                TextWrapping="Wrap" Text=""
+                materialDesign:HintAssist.Hint="Высота(м)"
+                VerticalAlignment="Top" 
+                Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="24,153,0,0"/>
+            <TextBox
+                x:Name="Thickness_brick"
+                HorizontalAlignment="Left" 
+                Width="250"
+                TextWrapping="Wrap" Text=""
+                materialDesign:HintAssist.Hint="Толщина(м)"
+                VerticalAlignment="Top" 
+                Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="24,225,0,0"/>
+            <ComboBox x:Name="Type_brick" HorizontalAlignment="Left"   Margin="24,290,0,0" VerticalAlignment="Top" Width="250" Style="{StaticResource MaterialDesignOutlinedComboBox}">
+                <ComboBoxItem>Керамический</ComboBoxItem>
+                <ComboBoxItem>Силикатный</ComboBoxItem>
+                <ComboBoxItem>Огнеупорный</ComboBoxItem>
+            </ComboBox>
+            <ComboBox x:Name="Masonry_brick" HorizontalAlignment="Left"   Margin="24,355,0,0" VerticalAlignment="Top" Width="250" Style="{StaticResource MaterialDesignOutlinedComboBox}">
+                <ComboBoxItem>Однорядная</ComboBoxItem>
+                <ComboBoxItem>Многорядная</ComboBoxItem>
+                <ComboBoxItem>Облегчённая</ComboBoxItem>
+            </ComboBox>
+            <Button Content="Расчитать" Width="250" Height="50" HorizontalAlignment="Left" Margin="24,420,0,0" VerticalAlignment="Top" />
+
+        </Grid>
+    </Grid>
+</Page>
