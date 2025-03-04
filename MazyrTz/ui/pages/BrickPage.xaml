@@ -48,7 +48,9 @@
                 <ComboBoxItem>Многорядная</ComboBoxItem>
                 <ComboBoxItem>Облегчённая</ComboBoxItem>
             </ComboBox>
-            <Button Content="Расчитать" Width="250" Height="50" HorizontalAlignment="Left" Margin="24,420,0,0" VerticalAlignment="Top" />
+            <Button Content="Расчитать" Width="250" Height="50" HorizontalAlignment="Left" Margin="24,420,0,0" VerticalAlignment="Top" Click="Brick_Calculate"/>
+            <TextBlock x:Name="bricks_txtBlock" HorizontalAlignment="Left" Margin="420,200,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Foreground="#FF2CD854" FontSize="36" FontWeight="Bold" Visibility="Hidden"/>
+            <Button x:Name="btnNext" Content="Далее" HorizontalAlignment="Left" Margin="605,455,0,0" VerticalAlignment="Top" Width="75" Visibility="Hidden" Click=""/>
 
         </Grid>
     </Grid>

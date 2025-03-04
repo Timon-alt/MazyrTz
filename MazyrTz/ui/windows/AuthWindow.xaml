@@ -14,10 +14,10 @@
             TextWrapping="Wrap" Text=""
             materialDesign:HintAssist.Hint="Email"
             VerticalAlignment="Top" 
-            Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="300,150,0,0"/>
+            Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="550,125,0,0"/>
         <PasswordBox 
             HorizontalAlignment="Left" 
-            Margin="300,215,0,0" VerticalAlignment="Top" 
+            Margin="550,195,0,0" VerticalAlignment="Top" 
             Width="250"
             materialDesign:HintAssist.Hint="Password"
             Style="{StaticResource MaterialDesignOutlinedPasswordBox}"/>
@@ -25,31 +25,32 @@
             Content="Авторизация"
             FontSize="32"
             HorizontalAlignment="Left" 
-            Margin="331,30,0,0" 
+            Margin="576,29,0,0" 
             VerticalAlignment="Top"
             Style="{StaticResource MaterialDesignLabel}"/>
-        
-            <Button 
+
+        <Button 
             Content="Войти"
             HorizontalAlignment="Left"
-            Margin="300,285,0,0" 
+            Margin="550,265,0,0" 
             VerticalAlignment="Top"
             Padding="10,5"
             Width="250"
             Height="50" 
             Style="{StaticResource MaterialDesignRaisedButton}"
             />
-        
-        
+
+
         <TextBlock 
             HorizontalAlignment="Left"
             FontSize="12"
             
-            Margin="370,355,0,0" 
+            Margin="620,340,0,0" 
             TextWrapping="Wrap"
             Text="Зарегестрироваться" 
             VerticalAlignment="Top"
             Style="{StaticResource MaterialDesignBody2TextBlock}" Foreground="#FF5F5D5D"/>
+        <Rectangle Fill="#FF673AB7" HorizontalAlignment="Left" Height="470" Stroke="Black" VerticalAlignment="Top" Width="480" Margin="0,0,0,-1"/>
 
     </Grid>
 </Window>
