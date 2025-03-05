@@ -8,14 +8,16 @@
         mc:Ignorable="d"
         Title="Авторизация" Height="500" Width="420">
     <Grid>
-        <TextBox 
+        <TextBox
+            x:Name="EmailBox"
             HorizontalAlignment="Left" 
             Width="250"
             TextWrapping="Wrap" Text=""
             materialDesign:HintAssist.Hint="Email"
             VerticalAlignment="Top" 
             Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="80,120,0,0"/>
-        <PasswordBox 
+        <PasswordBox
+            x:Name="PasswordBox"
             HorizontalAlignment="Left" 
             Margin="80,195,0,0" VerticalAlignment="Top" 
             Width="250"
@@ -38,7 +40,8 @@
             VerticalAlignment="Top"
             Padding="10,5"
             Width="250"
-            Height="50" 
+            Height="50"
+            Click="Login_Click"
             Style="{StaticResource MaterialDesignRaisedButton}"
             />
         <Button Content="Регистрация" HorizontalAlignment="Left" Margin="130,365,0,0" VerticalAlignment="Top" Width="150" Height="40" Click="Reg_Btn_Click"/>

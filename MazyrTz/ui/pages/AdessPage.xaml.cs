@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MazyrTz.database;
 
 namespace MazyrTz.ui.pages
 {
@@ -20,22 +21,39 @@ namespace MazyrTz.ui.pages
     /// </summary>
     public partial class AdessPage : Page
     {
-        private double cena;
+        private double cost;
         private string adress;
+        private double bricks_amount;
 
-        public AdessPage(double bricks_amount)
+        public AdessPage(double bricks_amountt)
         {
             InitializeComponent();
             double cenaa = Math.Round(bricks_amount * 30.6 + 500);
             Cena.Text = $"Итого: {cenaa} руб";
-            cena = cenaa;
+            cost = cenaa;
+            bricks_amount = bricks_amountt;
         }
 
-        public void Otpravit_click(object sender, RoutedEventArgs e)
+        public async void Otpravit_click(object sender, RoutedEventArgs e)
         {
-            Cena.Visibility = Visibility.Visible;
-            MessageBox.Show("Информация успешна обработана", "Сообщение", MessageBoxButton.OK);
-            NavigationService.Navigate(new BuildResPage());
+            try
+            {
+                adress = adress_txtBlock.Text;
+                var rawMaterials = new RawMaterials()
+                {
+                    bricks_count = bricks_amount,
+                    cost = cost,
+                    adress = adress
+                };
+                await App.supabase.From<RawMaterials>().Insert(rawMaterials);
+                MessageBox.Show("Информация успешна обработана", "Сообщение", MessageBoxButton.OK);
+                NavigationService.Navigate(new BuildResPage());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при добавлении данных: {ex.Message}");
+            }
+            
 
         }
     }

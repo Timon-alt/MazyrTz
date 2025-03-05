@@ -23,5 +23,22 @@ namespace MazyrTz.ui.windows
         {
             InitializeComponent();
         }
+
+        private async void SignUp_Click(object sender, RoutedEventArgs e)
+        {
+            string email = EmailBox.Text;
+            string password = PasswordBox.Password;
+
+            try
+            {
+                var session = await App.supabase.Auth.SignUp(email, password);
+                MessageBox.Show("Регистрация успешна!");
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка регистрации: {ex.Message}");
+            }
+        }
     }
 }
