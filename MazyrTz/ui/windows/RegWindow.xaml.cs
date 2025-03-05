@@ -15,21 +15,13 @@ using System.Windows.Shapes;
 namespace MazyrTz.ui.windows
 {
     /// <summary>
-    /// Логика взаимодействия для AuthWindow.xaml
+    /// Логика взаимодействия для RegWindow.xaml
     /// </summary>
-    public partial class AuthWindow : Window
+    public partial class RegWindow : Window
     {
-        public AuthWindow()
+        public RegWindow()
         {
             InitializeComponent();
-        }
-
-        
-
-       private void Reg_Btn_Click(object sender, RoutedEventArgs e)
-        {
-            RegWindow regWindow = new RegWindow();
-            regWindow.Show();
         }
     }
 }

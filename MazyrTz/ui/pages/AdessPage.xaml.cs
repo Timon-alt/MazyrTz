@@ -26,15 +26,17 @@ namespace MazyrTz.ui.pages
         public AdessPage(double bricks_amount)
         {
             InitializeComponent();
-            double cena = Math.Round(bricks_amount * 30.6 + 500);
-            Cena.Text = $"Цена кирпичей + доставка: {cena} руб";
-           
+            double cenaa = Math.Round(bricks_amount * 30.6 + 500);
+            Cena.Text = $"Итого: {cenaa} руб";
+            cena = cenaa;
         }
 
         public void Otpravit_click(object sender, RoutedEventArgs e)
         {
             Cena.Visibility = Visibility.Visible;
-            
+            MessageBox.Show("Информация успешна обработана", "Сообщение", MessageBoxButton.OK);
+            NavigationService.Navigate(new BuildResPage());
+
         }
     }
 }
