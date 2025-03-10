@@ -18,6 +18,7 @@
 
         <!-- Боковое меню -->
         <StackPanel Grid.Column="0" Background="#FF673AB7">
+            <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="30,20,40,20" TextWrapping="Wrap" Text="BuildingApp" VerticalAlignment="Top" FontSize="20" Foreground="White" FontWeight="Bold"/>
             <Button Content="Налог" Margin="10" Click="NalogButton_Click"/>
             <Button Content="График" Margin="10"  Click="GraphButton_Click"/>
             <Button Content="Сырьё" Margin="10" Click="RawMaterialButton_Click"/>
